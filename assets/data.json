@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "type": "project",
+    "title": "The Disco Biscuits",
+    "slug": "the-disco-biscuits-live",
+    "gif": "../assets/gifs/TDBlive.mp4",
+    "url": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fdiscobiscuits%2Fvideos%2F247067890253897%2F&show_text=false&width=560&t=0",
+    "isAvailable": true
+  },
+  {
+    "id": 2,
+    "type": "project",
+    "title": "Tom Morello",
+    "slug": "tom-morello",
+    "gif": "../assets/gifs/tom-morello.mp4",
+    "url": "https://www.youtube.com/embed/smBwO5JwAUw",
+    "isAvailable": true
+  },
+  {
+    "id": 3,
+    "type": "project",
+    "title": "Gnarbot - You Should See Me In a Crown",
+    "slug": "gnarbot-you-should-see-me-in-a-crown",
+    "gif": "../assets/gifs/gnarbot-crown.mp4",
+    "url": "https://www.youtube.com/embed/UVJTgfc5mlI",
+    "isAvailable": true
+  },
+  {
+    "id": 4,
+    "type": "project",
+    "title": "Luvrs - Call Me",
+    "slug": "luvrs-call-me",
+    "gif": "../assets/gifs/luvrs_call-me.mp4",
+    "url": "https://www.youtube.com/embed/eyvSorBZo3M",
+    "isAvailable": true
+  },
+  {
+    "id": 5,
+    "type": "project",
+    "title": "Horrendous",
+    "slug": "horrendous",
+    "gif": "../assets/gifs/horrendous.mp4",
+    "url": "https://www.youtube.com/embed/OMhS9pq7ywk?start=9254",
+    "isAvailable": true
+  },
+  {
+    "id": 6,
+    "type": "project",
+    "title": "Decouplr - Changes",
+    "slug": "decouplr-changes",
+    "gif": "../assets/gifs/music-videos-changes.mp4",
+    "url": "https://www.youtube.com/embed/3JNg-nSgf74",
+    "isAvailable": true
+  },
+  {
+    "id": 7,
+    "type": "project",
+    "title": "Bones UK",
+    "slug": "bones",
+    "gif": "../assets/gifs/bones.mp4",
+    "url": "https://www.youtube.com/embed/GQod8zkHPSc",
+    "isAvailable": true
+  },
+  {
+    "id": 8,
+    "type": "project",
+    "title": "Gnarbot - Cheebot",
+    "slug": "gnarbot-cheebot",
+    "gif": "../assets/gifs/gnarbot-cheebot.mp4",
+    "url": "https://www.youtube.com/embed/Dk98MDRrCEQ",
+    "isAvailable": true
+  },
+  {
+    "id": 9,
+    "type": "project",
+    "title": "NextFab",
+    "slug": "nextfab",
+    "gif": "../assets/gifs/nextfab.mp4",
+    "url": "https://www.youtube.com/embed/_7Go3m5HU9M",
+    "isAvailable": true
+  },
+  {
+    "id": 10,
+    "type": "project",
+    "title": "Adroit Theory Brewing",
+    "slug": "adroit-theory-brewing",
+    "gif": "../assets/gifs/adroit.mp4",
+    "url": "https://www.youtube.com/embed/OMhS9pq7ywk?start=8406",
+    "isAvailable": true
+  },
+  {
+    "id": 11,
+    "type": "project",
+    "title": "Working On Dying",
+    "slug": "working-on-dying",
+    "gif": "../assets/gifs/working-on-dying.mp4",
+    "url": "https://instagram.com/p/CIXQ6nip7gN/embed?utm_medium=copy_link",
+    "isAvailable": true
+  },
+  {
+    "id": 12,
+    "type": "project",
+    "title": "Decouplr - Cold Sweat",
+    "slug": "decouplr-cold-sweat",
+    "gif": "../assets/gifs/music-videos-cold-sweat.mp4",
+    "url": "https://www.youtube.com/embed/PnbGhrVa50E",
+    "isAvailable": true
+  }
+]
