@@ -33,7 +33,10 @@ function hideMobileNavOnDesktop() {
 
 // Open project information modal
 function openProjectModal() {
-  console.log('project clicked...')
+  const projectId = this.getAttribute('data-project-id')
+
+  // TODO: create project info modal with data from projectData
+  console.log('project clicked: ', projectId)
 }
 
 // Page load > project JSON
@@ -51,6 +54,7 @@ mobileNavItems.forEach((item) =>
 )
 
 // User clicks project > open modal with more information
-projectContainer.forEach((project) =>
+projectContainer.forEach((project, index) => {
+  project.setAttribute('data-project-id', index)
   project.addEventListener('click', openProjectModal)
-)
+})
