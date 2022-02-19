@@ -97,7 +97,7 @@ button {
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: var(--bg-primary);
   width: 100%;
 }
@@ -107,27 +107,74 @@ button {
   padding: 1rem;
 }
 
-.hero-nav .main-nav {
+.hero-nav .desktop-nav {
   display: none;
   font-size: var(--medium);
 }
 
 .hamburger {
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--bg-primary);
   padding: 1rem;
   height: 2rem;
   width: 2rem;
-  padding: 1rem;
   cursor: pointer;
+}
+
+.hamburger .top {
+  transform: translateY(-2.5px);
+}
+
+.hamburger .bottom {
+  transform: translateY(2.5px);
 }
 
 .hamburger .top,
 .hamburger .bottom {
-  background: white;
+  background: var(--text-primary);
   height: 5px;
-  margin: 0.4rem 0;
-  width: 92%;
+  width: 2rem;
   border-radius: 1px;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger.active .top {
+  transform: translateY(2.5px) rotate(45deg);
+}
+
+.hamburger.active .bottom {
+  transform: translateY(-2.5px) rotate(-45deg);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: var(--bg-primary);
+  height: 100vh;
+  width: 100vw;
+}
+
+.mobile-nav.active {
+  display: block;
+}
+
+.mobile-nav ul {
+  margin: 6rem 0;
+  padding: 2rem;
+}
+
+.mobile-nav ul li {
+  font-size: var(--large);
+  margin: 2rem 0;
+}
+
+.mobile-nav ul a {
+  font-weight: 300;
 }
 
 .hero-info {
@@ -260,13 +307,12 @@ button {
     padding: 1rem 2rem;
   }
 
-  .hero-nav .main-nav {
+  .hero-nav .desktop-nav {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
     width: 22rem;
   }
-
 
   .hamburger {
     display: none;

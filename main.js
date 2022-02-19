@@ -3,7 +3,11 @@ const hamburgerMenu = document.querySelector('.hamburger')
 
 // Mobile > toggle navigation menu
 function toggleHamburgerMenu() {
-  this.classList.toggle('is-active')
+  const hamburgerMenu = document.querySelector('.hamburger')
+  const mobileNav = document.querySelector('.mobile-nav')
+
+  hamburgerMenu.classList.toggle('active')
+  mobileNav.classList.toggle('active')
 }
 
 // Mobile > user clicks hambruger menu > toggle menu open
