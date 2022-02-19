@@ -11,7 +11,6 @@
     />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>
       SUPERVOID TV: Visual Design, Creative Content, Livestreaming, Broadcast,
       Visual FX
@@ -30,15 +29,15 @@
           <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
             <li>
-              <a class="portfolio-cta--js" href="#portfolio">Portfolio</a>
+              <a href="#portfolio">Portfolio</a>
             </li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <button class="mobile hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
+          <!-- mobile navigation -->
+          <div class="hamburger">
+            <span class="top"></span>
+            <span class="bottom"></span>
+          </div>
         </nav>
 
         <!-- Info & CTA's -->
@@ -49,14 +48,14 @@
             videos, films, animation and more
           </p>
           <div class="hero-cta-container">
-            <button class="portfolio-cta--js">browse portfolio</button>
+            <a href="#portfolio">browse portfolio</a>
             <button>watch promo</button>
           </div>
         </div>
       </header>
 
       <!-- Portfolio Section -->
-      <article id="portfolio">
+      <article id="portfolio" class="portfolio">
         <h2>portfolio</h2>
         <div class="projects">
           <div class="project-container" loading="lazy">
