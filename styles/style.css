@@ -212,11 +212,6 @@ button {
   max-width: 26rem;
 }
 
-.hero-cta-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .hero-info a {
   display: flex;
   justify-content: center;
@@ -336,13 +331,16 @@ button {
   }
 
   .hero-cta-container {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   .hero-info button,
   .hero-info a {
     font-size: var(--medium);
-    margin: 0.5rem auto;
+    margin: 0.5rem;
     width: 19rem;
   }
 
