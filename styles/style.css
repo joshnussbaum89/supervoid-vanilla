@@ -199,7 +199,7 @@ button {
 .hero-info h1 {
   transition: 0.4s;
   font-size: var(--extraLarge);
-  background-image: url('https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif');
+  background-image: url('../assets/gifs/title-background.gif');
   background-size: cover;
   color: transparent;
   background-clip: text;
