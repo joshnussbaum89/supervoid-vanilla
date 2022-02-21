@@ -1,218 +1,218 @@
 [
   {
     "id": 0,
-    "type": "project",
-    "title": "The Disco Biscuits",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "The Disco Biscuits",
+    "date": "1969",
     "slug": "the-disco-biscuits-live",
-    "gif": "../assets/gifs/TDBlive.mp4",
-    "url": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fdiscobiscuits%2Fvideos%2F247067890253897%2F&show_text=false&width=560&t=0",
-    "isAvailable": true
+    "gif": "./assets/gifs/TDBlive.mp4",
+    "url": "https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fdiscobiscuits%2Fvideos%2F247067890253897%2F&show_text=false&width=560&t=0"
   },
   {
     "id": 1,
-    "type": "project",
-    "title": "Tom Morello",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Tom Morello",
+    "date": "1969",
     "slug": "tom-morello",
-    "gif": "../assets/gifs/tom-morello.mp4",
-    "url": "https://www.youtube.com/embed/smBwO5JwAUw",
-    "isAvailable": true
+    "gif": "./assets/gifs/tom-morello.mp4",
+    "url": "https://www.youtube.com/embed/smBwO5JwAUw"
   },
   {
     "id": 2,
-    "type": "project",
-    "title": "Gnarbot - You Should See Me In a Crown",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Gnarbot - You Should See Me In a Crown",
+    "date": "1969",
     "slug": "gnarbot-you-should-see-me-in-a-crown",
-    "gif": "../assets/gifs/gnarbot-crown.mp4",
-    "url": "https://www.youtube.com/embed/UVJTgfc5mlI",
-    "isAvailable": true
+    "gif": "./assets/gifs/gnarbot-crown.mp4",
+    "url": "https://www.youtube.com/embed/UVJTgfc5mlI"
   },
   {
     "id": 3,
-    "type": "project",
-    "title": "Luvrs - Call Me",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Luvrs - Call Me",
+    "date": "1969",
     "slug": "luvrs-call-me",
-    "gif": "../assets/gifs/luvrs_call-me.mp4",
-    "url": "https://www.youtube.com/embed/eyvSorBZo3M",
-    "isAvailable": true
+    "gif": "./assets/gifs/luvrs_call-me.mp4",
+    "url": "https://www.youtube.com/embed/eyvSorBZo3M"
   },
   {
     "id": 4,
-    "type": "project",
-    "title": "Horrendous",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Horrendous",
+    "date": "1969",
     "slug": "horrendous",
-    "gif": "../assets/gifs/horrendous.mp4",
-    "url": "https://www.youtube.com/embed/OMhS9pq7ywk?start=9254",
-    "isAvailable": true
+    "gif": "./assets/gifs/horrendous.mp4",
+    "url": "https://www.youtube.com/embed/OMhS9pq7ywk?start=9254"
   },
   {
     "id": 5,
-    "type": "project",
-    "title": "Decouplr - Changes",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Decouplr - Changes",
+    "date": "1969",
     "slug": "decouplr-changes",
-    "gif": "../assets/gifs/music-videos-changes.mp4",
-    "url": "https://www.youtube.com/embed/3JNg-nSgf74",
-    "isAvailable": true
+    "gif": "./assets/gifs/music-videos-changes.mp4",
+    "url": "https://www.youtube.com/embed/3JNg-nSgf74"
   },
   {
     "id": 6,
-    "type": "project",
-    "title": "Bones UK",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Bones UK",
+    "date": "1969",
     "slug": "bones",
-    "gif": "../assets/gifs/bones.mp4",
-    "url": "https://www.youtube.com/embed/GQod8zkHPSc",
-    "isAvailable": true
+    "gif": "./assets/gifs/bones.mp4",
+    "url": "https://www.youtube.com/embed/GQod8zkHPSc"
   },
   {
     "id": 7,
-    "type": "project",
-    "title": "Gnarbot - Cheebot",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Gnarbot - Cheebot",
+    "date": "1969",
     "slug": "gnarbot-cheebot",
-    "gif": "../assets/gifs/gnarbot-cheebot.mp4",
-    "url": "https://www.youtube.com/embed/Dk98MDRrCEQ",
-    "isAvailable": true
+    "gif": "./assets/gifs/gnarbot-cheebot.mp4",
+    "url": "https://www.youtube.com/embed/Dk98MDRrCEQ"
   },
   {
     "id": 8,
-    "type": "project",
-    "title": "NextFab",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "NextFab",
+    "date": "1969",
     "slug": "nextfab",
-    "gif": "../assets/gifs/nextfab.mp4",
-    "url": "https://www.youtube.com/embed/_7Go3m5HU9M",
-    "isAvailable": true
+    "gif": "./assets/gifs/nextfab.mp4",
+    "url": "https://www.youtube.com/embed/_7Go3m5HU9M"
   },
   {
     "id": 9,
-    "type": "project",
-    "title": "Adroit Theory Brewing",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Adroit Theory Brewing",
+    "date": "1969",
     "slug": "adroit-theory-brewing",
-    "gif": "../assets/gifs/adroit.mp4",
-    "url": "https://www.youtube.com/embed/OMhS9pq7ywk?start=8406",
-    "isAvailable": true
+    "gif": "./assets/gifs/adroit.mp4",
+    "url": "https://www.youtube.com/embed/OMhS9pq7ywk?start=8406"
   },
   {
     "id": 10,
-    "type": "project",
-    "title": "Working On Dying",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Working On Dying",
+    "date": "1969",
     "slug": "working-on-dying",
-    "gif": "../assets/gifs/working-on-dying.mp4",
-    "url": "https://instagram.com/p/CIXQ6nip7gN/embed?utm_medium=copy_link",
-    "isAvailable": true
+    "gif": "./assets/gifs/working-on-dying.mp4",
+    "url": "https://instagram.com/p/CIXQ6nip7gN/embed?utm_medium=copy_link"
   },
   {
     "id": 11,
-    "type": "project",
-    "title": "Decouplr - Cold Sweat",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Decouplr - Cold Sweat",
+    "date": "1969",
     "slug": "decouplr-cold-sweat",
-    "gif": "../assets/gifs/music-videos-cold-sweat.mp4",
-    "url": "https://www.youtube.com/embed/PnbGhrVa50E",
-    "isAvailable": true
+    "gif": "./assets/gifs/music-videos-cold-sweat.mp4",
+    "url": "https://www.youtube.com/embed/PnbGhrVa50E"
   },
   {
     "id": 12,
-    "type": "project",
-    "title": "311",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "311",
+    "date": "1969",
     "slug": "311",
-    "gif": "../assets/gifs/311.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/311.mp4",
+    "url": null
   },
   {
     "id": 13,
-    "type": "project",
-    "title": "Catskill Mountain Jubilee",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Catskill Mountain Jubilee",
+    "date": "1969",
     "slug": "catskill-mountain-jubilee",
-    "gif": "../assets/gifs/catskill-mountain-jubilee.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/catskill-mountain-jubilee.mp4",
+    "url": null
   },
   {
     "id": 14,
-    "type": "project",
-    "title": "Converge",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Converge",
+    "date": "1969",
     "slug": "converge",
-    "gif": "../assets/gifs/converge.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/converge.mp4",
+    "url": null
   },
   {
     "id": 15,
-    "type": "project",
-    "title": "Deadguy",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Deadguy",
+    "date": "1969",
     "slug": "deadguy",
-    "gif": "../assets/gifs/deadguy.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/deadguy.mp4",
+    "url": null
   },
   {
     "id": 16,
-    "type": "project",
-    "title": "Decibel Metal + Beer Fest",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Decibel Metal + Beer Fest",
+    "date": "1969",
     "slug": "decibel-metal-beer-fest",
-    "gif": "../assets/gifs/decibel-metal-beer-fest-2021.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/decibel-metal-beer-fest-2021.mp4",
+    "url": null
   },
   {
     "id": 17,
-    "type": "project",
-    "title": "Fruut - As Hell",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Fruut - As Hell",
+    "date": "1969",
     "slug": "fruut-as-hell",
-    "gif": "../assets/gifs/fruut-as-hell.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/fruut-as-hell.mp4",
+    "url": null
   },
   {
     "id": 18,
-    "type": "project",
-    "title": "Luvrs - Lavender Hill",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Luvrs - Lavender Hill",
+    "date": "1969",
     "slug": "luvrs-lavender-hill",
-    "gif": "../assets/gifs/luvrs-lavender-hill.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/luvrs-lavender-hill.mp4",
+    "url": null
   },
   {
     "id": 19,
-    "type": "project",
-    "title": "Luvrs - Wicked",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Luvrs - Wicked",
+    "date": "1969",
     "slug": "luvrs-wicked",
-    "gif": "../assets/gifs/luvrs-wicked.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/luvrs-wicked.mp4",
+    "url": null
   },
   {
     "id": 20,
-    "type": "project",
-    "title": "Soja",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Soja",
+    "date": "1969",
     "slug": "soja",
-    "gif": "../assets/gifs/soja.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/soja.mp4",
+    "url": null
   },
   {
     "id": 21,
-    "type": "project",
-    "title": "Taylor Kelly - Maybe",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Taylor Kelly - Maybe",
+    "date": "1969",
     "slug": "taylor-kelly-maybe",
-    "gif": "../assets/gifs/taylor-kelly-maybe.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/taylor-kelly-maybe.mp4",
+    "url": null
   },
   {
     "id": 22,
-    "type": "project",
-    "title": "Thrice",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Thrice",
+    "date": "1969",
     "slug": "Thrice",
-    "gif": "../assets/gifs/thrice.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/thrice.mp4",
+    "url": null
   },
   {
     "id": 23,
-    "type": "project",
-    "title": "Trap Rabbit - Burger Scholar",
+    "project": "Lorem ipsum dolor sit amet",
+    "client": "Trap Rabbit - Burger Scholar",
+    "date": "1969",
     "slug": "trap-rabbit-burger-scholar",
-    "gif": "../assets/gifs/trap-rabbit-burger-scholar.mp4",
-    "url": null,
-    "isAvailable": true
+    "gif": "./assets/gifs/trap-rabbit-burger-scholar.mp4",
+    "url": null
   }
 ]
