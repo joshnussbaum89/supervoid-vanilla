@@ -1,10 +1,11 @@
 // Global DOM selectors
 const hamburgerMenu = document.querySelector('.hamburger')
 const mobileNavItems = document.querySelectorAll('.mobile-nav a')
+const projects = document.querySelector('.projects')
 const projectContainer = document.querySelectorAll('.project-container')
+const videos = document.querySelectorAll('.project-container video')
 const projectModal = document.querySelector('.project-modal')
 const projectModalClose = document.querySelector('.modal-content .close')
-let projectData
 
 // Load all project data + assign to projectData variable to be used anywhere onsite
 async function getProjectData() {
