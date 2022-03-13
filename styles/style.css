@@ -11,7 +11,7 @@
 
 :root {
   /* brand colors */
-  --bg-primary: #050500;
+  --bg-primary: #000;
   --text-primary: #f2f2f2;
   --accent-primary: #3700b3;
   --accent-secondary: #03dac5;
@@ -271,16 +271,11 @@ button {
   right: 0;
   background-color: var(--text-background);
   color: var(--text-primary);
-  opacity: 0;
   transition: 0.3s;
 }
 
 .project-container .project-overlay h3 {
   text-align: end;
-}
-
-.project-container:hover .project-overlay {
-  opacity: 1;
 }
 
 .project-modal {
@@ -461,7 +456,7 @@ button {
 /* Large Desktop */
 @media (min-width: 1440px) {
   .projects {
-    gap: 1rem;
+    /* gap: 1rem; */
     margin: auto;
     max-width: 1440px;
   }
