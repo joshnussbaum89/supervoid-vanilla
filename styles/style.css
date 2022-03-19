@@ -243,6 +243,43 @@ button {
   border-radius: 3rem;
 }
 
+.promo-video-container {
+  visibility: hidden;
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  background-color: var(--bg-primary);
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.promo-video-container.active {
+  visibility: visible;
+  z-index: 3;
+  opacity: 1;
+}
+
+.promo-video-container iframe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.promo-video-container .close {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+}
+
+.promo-video-container .close .top,
+.promo-video-container .close .bottom {
+  width: 3rem;
+}
+
 /* -- Portfolio -- */
 
 .portfolio {
@@ -429,6 +466,20 @@ button {
     font-size: var(--medium);
     margin: 0.5rem;
     width: 19rem;
+  }
+
+  .promo-video-container iframe {
+    width: 80%;
+  }
+
+  .promo-video-container .close {
+    top: 2rem;
+    right: 1rem;
+  }
+
+  .promo-video-container .close .top,
+  .promo-video-container .close .bottom {
+    width: 3rem;
   }
 
   /* -- Portfolio -- */

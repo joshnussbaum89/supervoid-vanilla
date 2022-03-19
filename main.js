@@ -1,6 +1,11 @@
 // Global DOM selectors
 const hamburgerMenu = document.querySelector('.hamburger')
 const mobileNavItems = document.querySelectorAll('.mobile-nav a')
+const watchPromoCTA = document.querySelector('.watch-promo--js')
+const promoVideoContainer = document.querySelector('.promo-video-container')
+const promoVideoCloseIcon = document.querySelector(
+  '.promo-video-container .close'
+)
 const projects = document.querySelector('.projects')
 const projectContainer = document.querySelectorAll('.project-container')
 const videos = document.querySelectorAll('.project-container video')
@@ -35,6 +40,10 @@ function hideMobileNavOnDesktop() {
   }
 }
 
+function showHidePromoVideoContainer() {
+  promoVideoContainer.classList.toggle('active')
+}
+
 // Open project modal popup with info about project clicked
 function openProjectModal() {
   // modal selectors
@@ -66,6 +75,12 @@ window.addEventListener('resize', hideMobileNavOnDesktop)
 
 // Mobile > user clicks hambruger menu > toggle menu open
 hamburgerMenu.addEventListener('click', toggleHamburgerMenu)
+
+// User clicks "watch promo" > open promo video container
+watchPromoCTA.addEventListener('click', showHidePromoVideoContainer)
+
+// User clicks video modal close icon > close promo video container
+promoVideoCloseIcon.addEventListener('click', showHidePromoVideoContainer)
 
 // Mobile > user clicks hamburger menu > toggle menu open
 mobileNavItems.forEach((item) =>
