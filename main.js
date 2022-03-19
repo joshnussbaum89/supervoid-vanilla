@@ -1,3 +1,6 @@
+// Initialize AOS animation library
+AOS.init()
+
 // Global DOM selectors
 const hamburgerMenu = document.querySelector('.hamburger')
 const mobileNavItems = document.querySelectorAll('.mobile-nav a')
@@ -60,9 +63,10 @@ function openProjectModal() {
 
   // update project gif, client, project + date
   modalGif.setAttribute('src', projectData[projectId].gif)
+  modalGif.setAttribute('alt', `${projectData[projectId].client}, ${projectData[projectId].project}`)
   modalClient.innerHTML = projectData[projectId].client
   modalProject.innerHTML = `<span class="modal-label">Project:</span> ${projectData[projectId].project}`
-  modalDate.innerHTML = `<span class="modal-label">Release:</span> ${projectData[projectId].date}`
+  modalDate.innerHTML = `<span class="modal-label">Description:</span> ${projectData[projectId].description}`
 }
 
 // Open project modal popup
