@@ -40,7 +40,16 @@ html {
 body {
   font-family: var(--font-plex-sans);
   background: var(--bg-primary);
-  color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.site-background {
+  position: fixed;
+}
+
+.site-background img {
+  width: 100vw;
+  height: 100vh;
 }
 
 h1,
@@ -81,7 +90,7 @@ p,
 li,
 a,
 button {
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 0.1rem;
   text-transform: lowercase;
 }
@@ -200,36 +209,29 @@ button {
 .hero-info h1 {
   transition: 0.4s;
   font-size: var(--extraLarge);
-  background-image: url('../assets/gifs/title-background.gif');
-  background-size: cover;
-  color: transparent;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .hero-info p {
   font-size: var(--small);
   margin: 0 auto 3.5rem auto;
   width: 95%;
-  max-width: 26rem;
+  max-width: 27rem;
 }
 
 .hero-info a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-primary);
-  background: var(--bg-primary);
-  border: 1px solid var(--text-primary);
+  color: var(--bg-primary);
+  border: 2px solid var(--bg-primary);
   text-decoration: none;
   -webkit-text-decoration: none;
 }
 
 .hero-info button {
   color: var(--text-primary);
-  background: var(--accent-primary);
-  border: 1px solid var(--accent-primary);
+  background: var(--bg-primary);
+  border: none;
   cursor: pointer;
 }
 
@@ -293,6 +295,7 @@ button {
 
 .project-container {
   position: relative;
+  height: 100%;
 }
 
 .project-container video,
@@ -306,7 +309,7 @@ button {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: var(--text-background);
+  background-color: var(--modal-background);
   color: var(--text-primary);
   transition: 0.3s;
 }
@@ -430,7 +433,6 @@ button {
 }
 
 .about-contact-icons svg {
-  fill: var(--text-primary);
   width: 1.5rem;
 }
 
@@ -452,14 +454,6 @@ button {
 
   /* -- Hero -- */
 
-  .hero-nav {
-    height: auto;
-    opacity: 1;
-    top: 0;
-    bottom: initial;
-    height: initial;
-  }
-
   .hero-nav img {
     width: 8rem;
     padding: 1rem 2rem;
@@ -469,6 +463,7 @@ button {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
+    margin: 0;
     gap: 3rem;
   }
 
@@ -559,13 +554,8 @@ button {
   }
 
   .about-contact-icons svg {
-    fill: var(--text-primary);
     width: 2rem;
     transition: all 0.25s ease-in-out;
-  }
-
-  .about-contact-icons svg:hover {
-    fill: var(--accent-primary);
   }
 }
 
