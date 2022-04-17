@@ -111,10 +111,17 @@ button {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: -102px;
   z-index: 3;
+  opacity: 0;
   background: var(--bg-primary);
   width: 100%;
+  transition: all 0.4s ease;
+}
+
+.hero-nav.show {
+  top: 0;
+  opacity: 1;
 }
 
 .hero-nav img {
@@ -245,7 +252,7 @@ button {
   border-radius: 3rem;
 }
 
-.promo-video-container {
+.promo-reel-container {
   visibility: hidden;
   position: fixed;
   z-index: -1;
@@ -256,13 +263,13 @@ button {
   transition: all 0.4s ease;
 }
 
-.promo-video-container.active {
+.promo-reel-container.active {
   visibility: visible;
   z-index: 3;
   opacity: 1;
 }
 
-.promo-video-container iframe {
+.promo-reel-container iframe {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -271,14 +278,14 @@ button {
   height: 100%;
 }
 
-.promo-video-container .close {
+.promo-reel-container .close {
   position: absolute;
   top: 1.5rem;
   right: 0;
 }
 
-.promo-video-container .close .top,
-.promo-video-container .close .bottom {
+.promo-reel-container .close .top,
+.promo-reel-container .close .bottom {
   width: 2.5rem;
 }
 
@@ -494,17 +501,17 @@ button {
     width: 19rem;
   }
 
-  .promo-video-container iframe {
+  .promo-reel-container iframe {
     width: 80%;
   }
 
-  .promo-video-container .close {
+  .promo-reel-container .close {
     top: 2rem;
     right: 1rem;
   }
 
-  .promo-video-container .close .top,
-  .promo-video-container .close .bottom {
+  .promo-reel-container .close .top,
+  .promo-reel-container .close .bottom {
     width: 3rem;
   }
 

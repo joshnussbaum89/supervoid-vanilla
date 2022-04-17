@@ -2,26 +2,41 @@
 AOS.init()
 
 // Global DOM selectors
-const hamburgerMenu = document.querySelector('.hamburger')
-const mobileNavItems = document.querySelectorAll('.mobile-nav a')
-const watchPromoCTA = document.querySelector('.watch-promo--js')
-const promoVideoContainer = document.querySelector('.promo-video-container')
-const promoVideoCloseIcon = document.querySelector(
-  '.promo-video-container .close'
-)
-const projects = document.querySelector('.projects')
-const projectContainer = document.querySelectorAll('.project-container')
-const videos = document.querySelectorAll('.project-container video')
-const projectModal = document.querySelector('.project-modal')
-const projectModalClose = document.querySelector('.modal-content .close')
+const mainNavigation       = document.querySelector('.hero-nav')
+const hamburgerMenu        = document.querySelector('.hamburger')
+const mobileNavItems       = document.querySelectorAll('.mobile-nav a')
+const watchPromoReelCTA    = document.querySelector('.watch-promo--js')
+const promoReelContainer   = document.querySelector('.promo-reel-container')
+const promoReelCloseIcon   = document.querySelector('.promo-reel-container .close')
+const projects             = document.querySelector('.projects')
+const projectContainer     = document.querySelectorAll('.project-container')
+const videos               = document.querySelectorAll('.project-container video')
+const projectModal         = document.querySelector('.project-modal')
+const projectModalClose    = document.querySelector('.modal-content .close')
+let previousScrollPosition = window.scrollY
 
 // Load all project data + assign to projectData variable to be used anywhere onsite
 async function getProjectData() {
   let response = await fetch('./assets/data.json')
-  let data = await response.json()
-  projectData = data
+  let data     = await response.json()
+  projectData  = data
 }
 getProjectData()
+
+// Handle navigation display on scroll
+function hideShowHeroNavigation() {
+  let currentScrollPosition = window.scrollY
+
+  // IF previous position is great than current position > hide navigation
+  // ELSE show navigation
+  if (previousScrollPosition > currentScrollPosition) {
+    mainNavigation.classList.remove('show')
+  } else {
+    mainNavigation.classList.add('show')
+  }
+
+  previousScrollPosition = currentScrollPosition
+}
 
 // Mobile > toggle navigation menu
 function toggleHamburgerMenu() {
@@ -43,17 +58,18 @@ function hideMobileNavOnDesktop() {
   }
 }
 
-function showHidePromoVideoContainer() {
-  promoVideoContainer.classList.toggle('active')
+// Hide or show promo reel
+function hideShowPromoReelContainer() {
+  promoReelContainer.classList.toggle('active')
 }
 
 // Open project modal popup with info about project clicked
 function openProjectModal() {
   // modal selectors
-  const modalGif = document.querySelector('.modal-gif--js')
-  const modalClient = document.querySelector('.modal-client--js')
+  const modalGif     = document.querySelector('.modal-gif--js')
+  const modalClient  = document.querySelector('.modal-client--js')
   const modalProject = document.querySelector('.modal-project--js')
-  const modalDate = document.querySelector('.modal-date--js')
+  const modalDate    = document.querySelector('.modal-date--js')
 
   // get project id to be used for data fetching
   const projectId = this.getAttribute('data-project-id')
@@ -64,9 +80,9 @@ function openProjectModal() {
   // update project gif, client, project + date
   modalGif.setAttribute('src', projectData[projectId].gif)
   modalGif.setAttribute('alt', `${projectData[projectId].client}, ${projectData[projectId].project}`)
-  modalClient.innerHTML = projectData[projectId].client
+  modalClient.innerHTML  = projectData[projectId].client
   modalProject.innerHTML = `<span class="modal-label">Project:</span> ${projectData[projectId].project}`
-  modalDate.innerHTML = `<span class="modal-label">Description:</span> ${projectData[projectId].description}`
+  modalDate.innerHTML    = `<span class="modal-label">Description:</span> ${projectData[projectId].description}`
 }
 
 // Open project modal popup
@@ -77,19 +93,20 @@ function closeProjectModal() {
 // Window resize > hide mobile navigation on desktop
 window.addEventListener('resize', hideMobileNavOnDesktop)
 
+// User scrolls > hide or show main hero navigation
+document.addEventListener('scroll', hideShowHeroNavigation)
+
 // Mobile > user clicks hambruger menu > toggle menu open
 hamburgerMenu.addEventListener('click', toggleHamburgerMenu)
 
-// User clicks "watch promo" > open promo video container
-watchPromoCTA.addEventListener('click', showHidePromoVideoContainer)
+// User clicks "watch reel" > open promo reel container
+watchPromoReelCTA.addEventListener('click', hideShowPromoReelContainer)
 
-// User clicks video modal close icon > close promo video container
-promoVideoCloseIcon.addEventListener('click', showHidePromoVideoContainer)
+// User clicks video modal close icon > close promo reel container
+promoReelCloseIcon.addEventListener('click', hideShowPromoReelContainer)
 
 // Mobile > user clicks hamburger menu > toggle menu open
-mobileNavItems.forEach((item) =>
-  item.addEventListener('click', toggleHamburgerMenu)
-)
+mobileNavItems.forEach((item) => item.addEventListener('click', toggleHamburgerMenu))
 
 // User clicks project > open modal with more information
 projectContainer.forEach((project, index) => {
