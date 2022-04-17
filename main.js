@@ -27,12 +27,15 @@ getProjectData()
 function hideShowHeroNavigation() {
   let currentScrollPosition = window.scrollY
 
-  // IF previous position is great than current position > hide navigation
-  // ELSE show navigation
-  if (previousScrollPosition > currentScrollPosition) {
-    mainNavigation.classList.remove('show')
-  } else {
-    mainNavigation.classList.add('show')
+  // IF current position is at least 5px down the page
+  if (currentScrollPosition > 5) {
+    // IF previous position is great than current position > hide navigation
+    // ELSE show navigation
+    if (previousScrollPosition > currentScrollPosition) {
+      mainNavigation.classList.remove('show')
+    } else {
+      mainNavigation.classList.add('show')
+    }
   }
 
   previousScrollPosition = currentScrollPosition
@@ -85,9 +88,16 @@ function openProjectModal() {
   modalDate.innerHTML    = `<span class="modal-label">Description:</span> ${projectData[projectId].description}`
 }
 
-// Open project modal popup
+// Close project modal popup
 function closeProjectModal() {
   projectModal.classList.toggle('active')
+}
+
+// When user cliks outside of project modal, close project modal
+function userClickedOutsideProjectModal(event) {
+  if (event.target === projectModal) {
+    closeProjectModal()
+  }
 }
 
 // Window resize > hide mobile navigation on desktop
@@ -116,3 +126,6 @@ projectContainer.forEach((project, index) => {
 
 // Close project modal popup
 projectModalClose.addEventListener('click', closeProjectModal)
+
+// User cliks outside of project modal, close project modal
+projectModal.addEventListener('click', userClickedOutsideProjectModal)
