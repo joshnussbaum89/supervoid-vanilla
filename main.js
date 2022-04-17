@@ -1,5 +1,5 @@
 // Initialize AOS animation library
-AOS.init()
+AOS.init({ once: true })
 
 // Global DOM selectors
 const mainNavigation       = document.querySelector('.hero-nav')
