@@ -238,7 +238,7 @@ button {
 .hero-info button {
   color: var(--text-primary);
   background: var(--bg-primary);
-  border: none;
+  border: 2px solid var(--bg-primary);
   cursor: pointer;
 }
 
@@ -323,7 +323,7 @@ button {
 
 .project-container .project-overlay h3 {
   text-align: end;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 0.5rem;
 }
 
 .project-modal {
@@ -425,7 +425,12 @@ button {
 .about p {
   font-size: var(--extraSmall);
   text-align: center;
+  margin: auto;
   margin-bottom: 2rem;
+}
+
+.about p:nth-of-type(1) {
+  width: 21.6rem;
 }
 
 .about .featured-text {
@@ -553,6 +558,10 @@ button {
     margin-bottom: 2rem;
   }
 
+  .about p:nth-of-type(1) {
+    width: 41.7rem;
+  }
+
   .about-contact-icons {
     display: flex;
     justify-content: center;
@@ -580,5 +589,13 @@ button {
   .about {
     padding: 8rem;
     max-width: 61rem;
+  }
+
+  .about p:nth-of-type(1) {
+    width: initial;
+  }
+
+  .about p:nth-of-type(2) {
+    width: 62rem;
   }
 }
