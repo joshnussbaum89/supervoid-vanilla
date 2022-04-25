@@ -27,15 +27,18 @@ getProjectData()
 function hideShowHeroNavigation() {
   let currentScrollPosition = window.scrollY
 
-  // IF current position is at least 5px down the page
-  if (currentScrollPosition > 5) {
+  // IF current position is at least 1px down the page > init navigation display logic
+  // ELSE hide navigation
+  if (currentScrollPosition > 1) {
     // IF previous position is great than current position > hide navigation
     // ELSE show navigation
-    if (previousScrollPosition > currentScrollPosition) {
+    if (previousScrollPosition < currentScrollPosition) {
       mainNavigation.classList.remove('show')
     } else {
       mainNavigation.classList.add('show')
     }
+  } else {
+    mainNavigation.classList.remove('show')
   }
 
   previousScrollPosition = currentScrollPosition
