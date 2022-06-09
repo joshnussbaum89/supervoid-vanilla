@@ -113,6 +113,9 @@ function openProjectModal() {
   // show project modal
   projectModal.classList.toggle('active')
 
+  // Handle scrolling behavior
+  updateOverlayScrollingHelper(projectModal)
+
   // update project gif, client, project + date
   modalGif.setAttribute('src', projectData[projectId].gif)
   modalGif.setAttribute('alt', `${projectData[projectId].client}, ${projectData[projectId].project}`)
@@ -124,6 +127,9 @@ function openProjectModal() {
 // Close project modal popup
 function closeProjectModal() {
   projectModal.classList.toggle('active')
+
+  // Handle scrolling behavior
+  updateOverlayScrollingHelper(projectModal)
 }
 
 // When user cliks outside of project modal, close project modal
