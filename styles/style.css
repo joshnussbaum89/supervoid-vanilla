@@ -43,6 +43,10 @@ body {
   color: var(--bg-primary);
 }
 
+body[data-overlay-displayed="true"] {
+  overflow-y: hidden;
+}
+
 .site-background {
   position: fixed;
   left: 0;
