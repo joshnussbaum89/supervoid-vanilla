@@ -1,3 +1,5 @@
+'use strict'
+
 // DOM helpers
 const $  = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
@@ -21,9 +23,14 @@ const projectContainer     = $$('.project-container')
 const videos               = $$('.project-container video')
 const projectModal         = $('.project-modal')
 const projectModalClose    = $('.modal-content .close')
+
+// Store projects from data.json
+let projectData
+
+// Track scroll position
 let previousScrollPosition = window.scrollY
 
-// Load all project data + assign to projectData variable to be used anywhere onsite
+// Load all project data + assign to global projectData variable
 async function getProjectData() {
   let response = await fetch('./assets/data.json')
   let data     = await response.json()
