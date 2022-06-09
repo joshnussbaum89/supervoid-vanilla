@@ -94,6 +94,10 @@ button {
   text-transform: lowercase;
 }
 
+img {
+  object-fit: cover;
+}
+
 .mobile {
   display: block;
 }
@@ -115,7 +119,7 @@ button {
   opacity: 0;
   background: var(--bg-primary);
   width: 100%;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .hero-nav.show {
@@ -159,7 +163,7 @@ button {
   height: 5px;
   width: 1.8rem;
   border-radius: 1px;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .hamburger.active .top {
@@ -179,7 +183,7 @@ button {
   height: 100vh;
   width: 100vw;
   transform: translateY(40px);
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .mobile-nav.active {
@@ -261,7 +265,7 @@ button {
   background-color: var(--bg-primary);
   width: 100%;
   height: 100%;
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .promo-reel-container.active {
@@ -319,7 +323,7 @@ button {
   right: 0;
   background-color: var(--modal-background);
   color: var(--text-primary);
-  transition: 0.3s;
+  transition: all 0.4s ease-in-out;
 }
 
 .project-container .project-overlay h3 {
@@ -337,7 +341,7 @@ button {
   width: 100%;
   height: 100%;
   background-color: var(--modal-background);
-  transition: all 0.4s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .project-modal.active {
@@ -500,8 +504,8 @@ button {
     align-items: center;
   }
 
-  .hero-info button,
-  .hero-info a {
+  .hero-info a,
+  .hero-info button {
     font-size: var(--medium);
     margin: 0.5rem;
     width: 19rem;
@@ -571,7 +575,6 @@ button {
 
   .about-contact-icons svg {
     width: 2rem;
-    transition: all 0.25s ease-in-out;
   }
 }
 

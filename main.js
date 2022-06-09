@@ -1,18 +1,26 @@
+// DOM helpers
+const $  = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
+
 // Initialize AOS animation library
 AOS.init({ once: true })
 
+// Initialize Vimeo Player
+const iframe = $('iframe')
+const player = new Vimeo.Player(iframe)
+
 // Global DOM selectors
-const mainNavigation       = document.querySelector('.hero-nav')
-const hamburgerMenu        = document.querySelector('.hamburger')
-const mobileNavItems       = document.querySelectorAll('.mobile-nav a')
-const watchPromoReelCTA    = document.querySelector('.watch-promo--js')
-const promoReelContainer   = document.querySelector('.promo-reel-container')
-const promoReelCloseIcon   = document.querySelector('.promo-reel-container .close')
-const projects             = document.querySelector('.projects')
-const projectContainer     = document.querySelectorAll('.project-container')
-const videos               = document.querySelectorAll('.project-container video')
-const projectModal         = document.querySelector('.project-modal')
-const projectModalClose    = document.querySelector('.modal-content .close')
+const mainNavigation       = $('.hero-nav')
+const hamburgerMenu        = $('.hamburger')
+const mobileNavItems       = $$('.mobile-nav a')
+const watchPromoReelCTA    = $('.watch-promo--js')
+const promoReelContainer   = $('.promo-reel-container')
+const promoReelCloseIcon   = $('.promo-reel-container .close')
+const projects             = $('.projects')
+const projectContainer     = $$('.project-container')
+const videos               = $$('.project-container video')
+const projectModal         = $('.project-modal')
+const projectModalClose    = $('.modal-content .close')
 let previousScrollPosition = window.scrollY
 
 // Load all project data + assign to projectData variable to be used anywhere onsite
@@ -27,18 +35,12 @@ getProjectData()
 function hideShowHeroNavigation() {
   let currentScrollPosition = window.scrollY
 
-  // IF current position is at least 1px down the page > init navigation display logic
-  // ELSE hide navigation
-  if (currentScrollPosition > 1) {
-    // IF previous position is great than current position > hide navigation
-    // ELSE show navigation
-    if (previousScrollPosition < currentScrollPosition) {
-      mainNavigation.classList.remove('show')
-    } else {
-      mainNavigation.classList.add('show')
-    }
-  } else {
+  // IF previous position is greater than current position > hide navigation
+  // ELSE show navigation
+  if (previousScrollPosition < currentScrollPosition) {
     mainNavigation.classList.remove('show')
+  } else {
+    mainNavigation.classList.add('show')
   }
 
   previousScrollPosition = currentScrollPosition
@@ -46,7 +48,7 @@ function hideShowHeroNavigation() {
 
 // Mobile > toggle navigation menu
 function toggleHamburgerMenu() {
-  const mobileNav = document.querySelector('.mobile-nav')
+  const mobileNav = $('.mobile-nav')
 
   // Toggle active classes for styling
   hamburgerMenu.classList.toggle('active')
@@ -56,7 +58,7 @@ function toggleHamburgerMenu() {
 // Hide mobile navigation on desktop
 function hideMobileNavOnDesktop() {
   if (window.innerWidth >= 768) {
-    const mobileNav = document.querySelector('.mobile-nav')
+    const mobileNav = $('.mobile-nav')
 
     // Remove all active classes
     hamburgerMenu.classList.remove('active')
@@ -67,15 +69,18 @@ function hideMobileNavOnDesktop() {
 // Hide or show promo reel
 function hideShowPromoReelContainer() {
   promoReelContainer.classList.toggle('active')
+
+  // IF video is playing when user closes promo reel, pause the video
+  if ($('body').getAttribute('data-video-playing')) player.pause()
 }
 
 // Open project modal popup with info about project clicked
 function openProjectModal() {
   // modal selectors
-  const modalGif     = document.querySelector('.modal-gif--js')
-  const modalClient  = document.querySelector('.modal-client--js')
-  const modalProject = document.querySelector('.modal-project--js')
-  const modalDate    = document.querySelector('.modal-date--js')
+  const modalGif     = $('.modal-gif--js')
+  const modalClient  = $('.modal-client--js')
+  const modalProject = $('.modal-project--js')
+  const modalDate    = $('.modal-date--js')
 
   // get project id to be used for data fetching
   const projectId = this.getAttribute('data-project-id')
@@ -130,5 +135,9 @@ projectContainer.forEach((project, index) => {
 // Close project modal popup
 projectModalClose.addEventListener('click', closeProjectModal)
 
-// User cliks outside of project modal, close project modal
+// User clicks outside of project modal, close project modal
 projectModal.addEventListener('click', userClickedOutsideProjectModal)
+
+// User clicks play/pause on reel > update video helper
+player.on('play',  () => $('body').setAttribute('data-video-playing', true))
+player.on('pause', () => $('body').setAttribute('data-video-playing', false))
