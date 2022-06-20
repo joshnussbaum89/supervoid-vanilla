@@ -122,6 +122,10 @@ function displayProjectModal(id) {
 
 // Open project modal popup with info about project clicked
 function openProjectModal() {
+  // reset navigation
+  navigateLeftModal.classList.remove('hide')
+  navigateRightModal.classList.remove('hide')
+
   // fetch data from selected project ID
   const projectId = this.getAttribute('data-project-id')
 
