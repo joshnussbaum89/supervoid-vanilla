@@ -138,17 +138,29 @@ function openProjectModal() {
 
 // Navigate to previous project
 function navigateToPreviousProject() {
-  if (currentProjectId > 0) {
+  if (currentProjectId > 0 && currentProjectId <= projectData.length - 1) {
     currentProjectId -= 1
     displayProjectModal(currentProjectId)
+
+    // show right arrow
+    navigateRightModal.classList.remove('hide')
+
+    // IF all the way left > hide left arrow
+    if (currentProjectId === 0) this.classList.add('hide')
   }
 }
 
 // Navigate to next project
 function navigateToNextProject() {
-  if (currentProjectId < projectData.length - 1) {
+  if (currentProjectId < (projectData.length - 1) && currentProjectId >= 0) {
     currentProjectId += 1
     displayProjectModal(currentProjectId)
+
+    // show left arrow
+    navigateLeftModal.classList.remove('hide')
+
+    // IF all the way right > hide right arrow
+    if (currentProjectId === projectData.length - 1) this.classList.add('hide')
   }
 }
 
