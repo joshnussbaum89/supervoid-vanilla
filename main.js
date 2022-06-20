@@ -24,7 +24,12 @@ const projects             = $('.projects')
 const projectContainer     = $$('.project-container')
 const videos               = $$('.project-container video')
 const projectModal         = $('.project-modal')
+const navigateLeftModal    = $('.navigate-left')
+const navigateRightModal   = $('.navigate-right')
 const projectModalClose    = $('.modal-content .close')
+
+// Track currently displayed project ID
+let currentProjectId
 
 // Store projects from data.json
 let projectData
@@ -99,29 +104,52 @@ function hideShowPromoReelContainer() {
   if ($('body').getAttribute('data-video-playing')) player.pause()
 }
 
-// Open project modal popup with info about project clicked
-function openProjectModal() {
+// Populate project modal based on ID parameter
+function displayProjectModal(id) {
   // modal selectors
   const modalGif     = $('.modal-gif--js')
   const modalClient  = $('.modal-client--js')
   const modalProject = $('.modal-project--js')
   const modalDate    = $('.modal-date--js')
 
-  // get project id to be used for data fetching
+  // update project gif, client, project + date
+  modalGif.setAttribute('src', projectData[id].gif)
+  modalGif.setAttribute('alt', `${projectData[id].client}, ${projectData[id].project}`)
+  modalClient.innerHTML  = projectData[id].client
+  modalProject.innerHTML = `<span class="modal-label">Project:</span> ${projectData[id].project}`
+  modalDate.innerHTML    = `<span class="modal-label">Description:</span> ${projectData[id].description}`
+}
+
+// Open project modal popup with info about project clicked
+function openProjectModal() {
+  // fetch data from selected project ID
   const projectId = this.getAttribute('data-project-id')
 
   // show project modal
   projectModal.classList.toggle('active')
 
-  // Handle scrolling behavior
+  // Handle scrolling behavior + display open modal with project info displayed
   updateOverlayScrollingHelper(projectModal)
+  displayProjectModal(projectId)
 
-  // update project gif, client, project + date
-  modalGif.setAttribute('src', projectData[projectId].gif)
-  modalGif.setAttribute('alt', `${projectData[projectId].client}, ${projectData[projectId].project}`)
-  modalClient.innerHTML  = projectData[projectId].client
-  modalProject.innerHTML = `<span class="modal-label">Project:</span> ${projectData[projectId].project}`
-  modalDate.innerHTML    = `<span class="modal-label">Description:</span> ${projectData[projectId].description}`
+  // update global project ID tracker
+  currentProjectId = +projectId
+}
+
+// Navigate to previous project
+function navigateToPreviousProject() {
+  if (currentProjectId > 0) {
+    currentProjectId -= 1
+    displayProjectModal(currentProjectId)
+  }
+}
+
+// Navigate to next project
+function navigateToNextProject() {
+  if (currentProjectId < projectData.length - 1) {
+    currentProjectId += 1
+    displayProjectModal(currentProjectId)
+  }
 }
 
 // Close project modal popup
@@ -165,6 +193,10 @@ projectContainer.forEach((project, index) => {
   project.setAttribute('data-project-id', index)
   project.addEventListener('click', openProjectModal)
 })
+
+// User clicks left or right arrow in project modal > navigate projects
+navigateLeftModal.addEventListener('click', navigateToPreviousProject)
+navigateRightModal.addEventListener('click', navigateToNextProject)
 
 // Close project modal popup
 projectModalClose.addEventListener('click', closeProjectModal)
