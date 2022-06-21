@@ -531,7 +531,7 @@ img {
 
   .hero-info p {
     font-size: var(--medium);
-    max-width: 48rem;
+    max-width: 50rem;
   }
 
   .hero-cta-container {
