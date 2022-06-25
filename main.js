@@ -106,6 +106,18 @@ function hideShowPromoReelContainer() {
 
 // Populate project modal based on ID parameter
 function displayProjectModal(id) {
+  // reset navigation
+  navigateLeftModal.classList.remove('hide')
+  navigateRightModal.classList.remove('hide')
+
+  // IF user clicks FIRST gif > hide left modal nav arrow
+  // ELSE IF user clicks LAST gif > hide right modal nav arrow
+  if (+id === 0) {
+    navigateLeftModal.classList.add('hide')
+  } else if (+id === projectData.length - 1) {
+    navigateRightModal.classList.add('hide')
+  }
+
   // modal selectors
   const modalGif     = $('.modal-gif--js')
   const modalClient  = $('.modal-client--js')

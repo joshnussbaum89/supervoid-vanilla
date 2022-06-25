@@ -354,7 +354,7 @@ img {
   color: var(--color-white);
   background-color: var(--color-black);
   margin: auto;
-  padding: 5rem 3rem;
+  padding: 2rem 3rem 5rem;
   border: 2px solid var(--color-white);
   width: 80%;
   max-width: 625px;
@@ -517,6 +517,11 @@ img {
     gap: 3rem;
   }
 
+  .desktop-nav a:hover {
+    transition: all 0.25s ease;
+    color: var(--color-red);
+  }
+
   .hamburger {
     display: none;
   }
@@ -584,7 +589,7 @@ img {
   }
 
   .modal-content {
-    padding: 7rem 4rem;
+    padding: 3rem 4rem 6rem;
   }
 
   .modal-info p {
