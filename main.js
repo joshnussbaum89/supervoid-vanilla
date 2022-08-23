@@ -1,7 +1,7 @@
 'use strict'
 
 // DOM helpers
-const $  = document.querySelector.bind(document)
+const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 // Initialize AOS animation library
@@ -12,21 +12,21 @@ const iframe = $('iframe')
 const player = new Vimeo.Player(iframe)
 
 // Global DOM selectors
-const mainNavigation       = $('.hero-nav')
-const supervoidLogo        = $('.hero-nav a')
-const hamburgerMenu        = $('.hamburger')
-const mobileNav            = $('.mobile-nav')
-const mobileNavItems       = $$('.mobile-nav a')
-const watchPromoReelCTA    = $('.watch-promo--js')
-const promoReelContainer   = $('.promo-reel-container')
-const promoReelCloseIcon   = $('.promo-reel-container .close')
-const projects             = $('.projects')
-const projectContainer     = $$('.project-container')
-const videos               = $$('.project-container video')
-const projectModal         = $('.project-modal')
-const navigateLeftModal    = $('.navigate-left')
-const navigateRightModal   = $('.navigate-right')
-const projectModalClose    = $('.modal-content .close')
+const mainNavigation = $('.hero-nav')
+const supervoidLogo = $('.hero-nav a')
+const hamburgerMenu = $('.hamburger')
+const mobileNav = $('.mobile-nav')
+const mobileNavItems = $$('.mobile-nav a')
+const watchPromoReelCTA = $('.watch-promo--js')
+const promoReelContainer = $('.promo-reel-container')
+const promoReelCloseIcon = $('.promo-reel-container .close')
+const projects = $('.projects')
+const projectContainer = $$('.project-container')
+const videos = $$('.project-container video')
+const projectModal = $('.project-modal')
+const navigateLeftModal = $('.navigate-left')
+const navigateRightModal = $('.navigate-right')
+const projectModalClose = $('.modal-content .close')
 
 // Track currently displayed project ID
 let currentProjectId
@@ -40,8 +40,8 @@ let previousScrollPosition = window.scrollY
 // Load all project data + assign to global projectData variable
 async function getProjectData() {
   let response = await fetch('./assets/data.json')
-  let data     = await response.json()
-  projectData  = data
+  let data = await response.json()
+  projectData = data
 }
 getProjectData()
 
@@ -119,17 +119,20 @@ function displayProjectModal(id) {
   }
 
   // modal selectors
-  const modalGif     = $('.modal-gif--js')
-  const modalClient  = $('.modal-client--js')
+  const modalGif = $('.modal-gif--js')
+  const modalClient = $('.modal-client--js')
   const modalProject = $('.modal-project--js')
-  const modalDate    = $('.modal-date--js')
+  const modalDate = $('.modal-date--js')
 
   // update project gif, client, project + date
   modalGif.setAttribute('src', projectData[id].gif)
-  modalGif.setAttribute('alt', `${projectData[id].client}, ${projectData[id].project}`)
-  modalClient.innerHTML  = projectData[id].client
+  modalGif.setAttribute(
+    'alt',
+    `${projectData[id].client}, ${projectData[id].project}`
+  )
+  modalClient.innerHTML = projectData[id].client
   modalProject.innerHTML = `<span class="modal-label">Project:</span> ${projectData[id].project}`
-  modalDate.innerHTML    = `<span class="modal-label">Description:</span> ${projectData[id].description}`
+  modalDate.innerHTML = `<span class="modal-label">Description:</span> ${projectData[id].description}`
 }
 
 // Open project modal popup with info about project clicked
@@ -168,7 +171,7 @@ function navigateToPreviousProject() {
 
 // Navigate to next project
 function navigateToNextProject() {
-  if (currentProjectId < (projectData.length - 1) && currentProjectId >= 0) {
+  if (currentProjectId < projectData.length - 1 && currentProjectId >= 0) {
     currentProjectId += 1
     displayProjectModal(currentProjectId)
 
@@ -214,7 +217,9 @@ promoReelCloseIcon.addEventListener('click', hideShowPromoReelContainer)
 supervoidLogo.addEventListener('click', closeMobileNavigation)
 
 // Mobile > user clicks hamburger menu > toggle menu open
-mobileNavItems.forEach((item) => item.addEventListener('click', toggleMobileNavigation))
+mobileNavItems.forEach((item) =>
+  item.addEventListener('click', toggleMobileNavigation)
+)
 
 // User clicks project > open modal with more information
 projectContainer.forEach((project, index) => {
@@ -233,5 +238,5 @@ projectModalClose.addEventListener('click', closeProjectModal)
 projectModal.addEventListener('click', userClickedOutsideProjectModal)
 
 // User clicks play/pause on reel > update video helper
-player.on('play',  () => $('body').setAttribute('data-video-playing', true))
+player.on('play', () => $('body').setAttribute('data-video-playing', true))
 player.on('pause', () => $('body').setAttribute('data-video-playing', false))

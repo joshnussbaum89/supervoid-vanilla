@@ -19,7 +19,11 @@
   --color-faded-black: #000000cc;
   --color-faded-purple: #3600b384;
   --color-dark-purple: #330737;
-  --color-red-gradient: linear-gradient(135deg, var(--color-red) 20%, var(--color-dark-purple) 100%);
+  --color-red-gradient: linear-gradient(
+    135deg,
+    var(--color-red) 20%,
+    var(--color-dark-purple) 100%
+  );
 
   --font-plex-sans: 'IBM Plex Sans KR', sans-serif;
   --font-supervoid: 'brightfate', sans-serif;
@@ -44,7 +48,7 @@ body {
   color: var(--color-white);
 }
 
-body[data-overlay-displayed="true"] {
+body[data-overlay-displayed='true'] {
   overflow-y: hidden;
 }
 
@@ -479,7 +483,7 @@ img {
 .about-contact-icons svg {
   width: 1.5rem;
   fill: var(--color-white);
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .about-contact-icons p.email {
@@ -603,7 +607,6 @@ img {
   .navigate-right {
     right: 2%;
   }
-
 
   /* About */
 
