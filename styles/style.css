@@ -231,13 +231,13 @@ img {
 
 .hero-info img {
   width: 95%;
-  max-width: 32rem;
+  max-width: 52rem;
 }
 
 .hero-info p {
   margin: 0 auto 2rem auto;
   width: 95%;
-  max-width: 31rem;
+  max-width: 50rem;
   font-size: var(--small);
   text-shadow: 1px 1px 0 var(--color-black);
   color: var(--color-white);
@@ -270,7 +270,7 @@ img {
 
 .promo-reel-container.active {
   visibility: visible;
-  z-index: 3;
+  z-index: 100;
   opacity: 1;
 }
 
@@ -456,9 +456,9 @@ img {
 
 .about {
   margin: auto;
-  padding: 4rem 0;
-  width: 90%;
-  max-width: 25rem;
+  padding: 6rem 0;
+  width: 95%;
+  max-width: 54rem;
 }
 
 .about p {
@@ -534,13 +534,8 @@ img {
     font-size: var(--titleLarge);
   }
 
-  .hero-info img {
-    max-width: 52rem;
-  }
-
   .hero-info p {
     font-size: var(--medium);
-    max-width: 50rem;
   }
 
   .hero-cta-container {
@@ -611,16 +606,12 @@ img {
   /* About */
 
   .about {
-    max-width: 42rem;
+    padding: 8rem 0;
   }
 
   .about p {
     font-size: var(--small);
     margin-bottom: 2rem;
-  }
-
-  .about p:nth-of-type(1):not(.email) {
-    width: 41.7rem;
   }
 
   .about-contact-icons {
@@ -646,20 +637,5 @@ img {
   .projects {
     margin: auto;
     max-width: 1440px;
-  }
-
-  /* About */
-
-  .about {
-    padding: 8rem 0;
-    max-width: 61rem;
-  }
-
-  .about p:nth-of-type(1):not(.email) {
-    width: initial;
-  }
-
-  .about p:nth-of-type(2) {
-    width: 62rem;
   }
 }
