@@ -520,13 +520,13 @@ img {
   }
 }
 
-.modal-content img {
-  user-select: none;
+.modal-content img,
+.modal-info {
+  width: 100%;
 }
 
-.modal-content img,
-.modal-content .modal-info {
-  width: 100%;
+.modal-content img {
+  user-select: none;
 }
 
 .modal-info {
