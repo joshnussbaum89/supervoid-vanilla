@@ -524,6 +524,11 @@ img {
   user-select: none;
 }
 
+.modal-content img,
+.modal-content .modal-info {
+  width: 100%;
+}
+
 .modal-info {
   height: 8rem;
 }
