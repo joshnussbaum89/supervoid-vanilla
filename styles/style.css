@@ -36,6 +36,12 @@
   --titleLarge: 5.5rem;
 }
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -68,9 +74,35 @@ h2 {
   padding: 2rem;
 }
 
+@media (min-width: 768px) {
+  h2 {
+    font-size: var(--extraLarge);
+  }
+}
+
 h3 {
   font-size: var(--small);
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: var(--medium);
+  }
+}
+
+p,
+li,
+a,
+button {
+  font-family: inherit;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: lowercase;
+}
+
+p {
+  margin: 0;
 }
 
 li {
@@ -82,25 +114,28 @@ a {
   color: var(--color-white);
 }
 
-p {
-  margin: 0;
-}
-
-p,
-li,
-a,
-button {
-  font-weight: 300;
-  letter-spacing: 0.1rem;
-  text-transform: lowercase;
-}
-
 img {
   object-fit: cover;
 }
 
-.mobile {
-  display: block;
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-white);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-white);
 }
 
 /* -- Hero Section -- */
@@ -145,9 +180,32 @@ img {
   padding: 0 1rem;
 }
 
+@media (min-width: 768px) {
+  .hero-nav img {
+    width: 8rem;
+  }
+}
+
 .hero-nav .desktop-nav {
   display: none;
   font-size: var(--medium);
+}
+
+@media (min-width: 768px) {
+  .hero-nav .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin: 0;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .desktop-nav a:hover {
+    transition: all 0.25s ease;
+    color: var(--color-red);
+  }
 }
 
 .hamburger {
@@ -160,6 +218,12 @@ img {
   width: 2rem;
   background: var(--color-black);
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
 }
 
 .hamburger .top {
@@ -234,6 +298,12 @@ img {
   max-width: 52rem;
 }
 
+@media (min-width: 768px) {
+  .hero-info h1 {
+    font-size: var(--titleLarge);
+  }
+}
+
 .hero-info p {
   margin: 0 auto 2rem auto;
   width: 95%;
@@ -243,7 +313,13 @@ img {
   color: var(--color-white);
 }
 
-.hero-info .hero-cta-container button {
+@media (min-width: 768px) {
+  .hero-info p {
+    font-size: var(--medium);
+  }
+}
+
+.hero-info button {
   margin: 0.5rem auto;
   height: 5rem;
   width: 65%;
@@ -255,6 +331,20 @@ img {
   border: none;
   border-radius: 3rem;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .hero-info button {
+    font-size: var(--medium);
+    height: 5.25rem;
+    transition: all 0.25s ease;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-info button:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .promo-reel-container {
@@ -283,15 +373,35 @@ img {
   height: 100%;
 }
 
+@media (min-width: 768px) {
+  .promo-reel-container iframe {
+    width: 80%;
+  }
+}
+
 .promo-reel-container .close {
   position: absolute;
   top: 1.5rem;
   right: 0;
 }
 
+@media (min-width: 768px) {
+  .promo-reel-container .close {
+    top: 2rem;
+    right: 1rem;
+  }
+}
+
 .promo-reel-container .close .top,
 .promo-reel-container .close .bottom {
   width: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .promo-reel-container .close .top,
+  .promo-reel-container .close .bottom {
+    width: 3rem;
+  }
 }
 
 /* -- Portfolio -- */
@@ -300,14 +410,34 @@ img {
   padding-top: 6rem;
 }
 
+@media (min-width: 768px) {
+  .portfolio {
+    padding-top: 9rem;
+  }
+}
+
 .projects {
   display: grid;
   grid-template-columns: 1fr;
+  margin: auto;
+  max-width: 1440px;
+}
+
+@media (min-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-container {
   position: relative;
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .project-container {
+    cursor: pointer;
+  }
 }
 
 .project-image-container {
@@ -343,6 +473,12 @@ img {
   padding: 0.75rem 0.75rem 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .project-container .project-overlay h3 {
+    padding: 1rem 1rem 0.66rem;
+  }
+}
+
 .project-modal {
   position: fixed;
   display: flex;
@@ -357,7 +493,7 @@ img {
 }
 
 .project-modal.active {
-  z-index: 3;
+  z-index: 100;
   display: flex;
   opacity: 1;
 }
@@ -377,24 +513,18 @@ img {
   overflow: auto;
 }
 
+@media (min-width: 768px) {
+  .modal-content {
+    padding: 3rem 4rem 6rem;
+  }
+}
+
+.modal-content img {
+  user-select: none;
+}
+
 .modal-info {
   height: 8rem;
-}
-
-.modal-content video,
-.modal-content img,
-.modal-content .modal-info {
-  width: 100%;
-}
-
-.modal-info p {
-  font-size: var(--extraSmall);
-  color: var(--color-grey);
-  margin-bottom: 0.75rem;
-}
-
-.modal-info .modal-label {
-  color: var(--color-white);
 }
 
 .modal-info h3 {
@@ -403,12 +533,25 @@ img {
   padding: 0;
 }
 
-.modal-description {
-  padding-bottom: 3rem;
+.modal-info p {
+  font-size: var(--extraSmall);
+  color: var(--color-grey);
+  margin-bottom: 0.75rem;
 }
 
-.modal-label {
+@media (min-width: 768px) {
+  .modal-info p {
+    font-size: var(--small);
+  }
+}
+
+.modal-info .modal-label {
+  color: var(--color-white);
   font-weight: 400;
+}
+
+.modal-description {
+  padding-bottom: 3rem;
 }
 
 .close {
@@ -446,8 +589,20 @@ img {
   left: 1%;
 }
 
+@media (min-width: 768px) {
+  .navigate-left {
+    left: 2%;
+  }
+}
+
 .navigate-right {
   right: 1%;
+}
+
+@media (min-width: 768px) {
+  .navigate-right {
+    right: 2%;
+  }
 }
 
 .navigate-left.hide,
@@ -473,12 +628,25 @@ img {
   max-width: 54rem;
 }
 
+@media (min-width: 768px) {
+  .about {
+    padding: 8rem 0;
+  }
+}
+
 .about p {
   margin: auto;
   margin-bottom: 2rem;
   font-size: var(--extraSmall);
   text-align: center;
   color: var(--color-grey);
+}
+
+@media (min-width: 768px) {
+  .about p {
+    font-size: var(--small);
+    margin-bottom: 2rem;
+  }
 }
 
 .about .featured-text {
@@ -492,162 +660,32 @@ img {
   margin: 1rem;
 }
 
+@media (min-width: 768px) {
+  .about-contact-icons {
+    gap: 4rem;
+  }
+}
+
 .about-contact-icons svg {
   width: 1.5rem;
   fill: var(--color-white);
   transition: all 0.25s ease;
 }
 
-.about-contact-icons p.email {
-  margin: 0;
-  color: var(--color-white);
-}
-
-/* Desktop */
 @media (min-width: 768px) {
-  /* -- General --  */
-
-  h2 {
-    font-size: var(--extraLarge);
-  }
-
-  h3 {
-    font-size: var(--medium);
-  }
-
-  .mobile {
-    display: none;
-  }
-
-  /* -- Hero -- */
-
-  .hero-nav img {
-    width: 8rem;
-  }
-
-  .hero-nav .desktop-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    margin: 0;
-    gap: 3rem;
-  }
-
-  .desktop-nav a:hover {
-    transition: all 0.25s ease;
-    color: var(--color-red);
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .hero-info h1 {
-    font-size: var(--titleLarge);
-  }
-
-  .hero-info p {
-    font-size: var(--medium);
-  }
-
-  .hero-cta-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .hero-info .hero-cta-container button {
-    font-size: var(--medium);
-    height: 5.25rem;
-    transition: all 0.25s ease;
-  }
-
-  .hero-info .hero-cta-container button:hover {
-    transform: translateY(-2px);
-  }
-
-  .promo-reel-container iframe {
-    width: 80%;
-  }
-
-  .promo-reel-container .close {
-    top: 2rem;
-    right: 1rem;
-  }
-
-  .promo-reel-container .close .top,
-  .promo-reel-container .close .bottom {
-    width: 3rem;
-  }
-
-  /* -- Portfolio -- */
-
-  .portfolio {
-    padding-top: 9rem;
-  }
-
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-container {
-    cursor: pointer;
-  }
-
-  .project-container .project-overlay h3 {
-    padding: 1rem 1rem 0.66rem;
-  }
-
-  .modal-content {
-    padding: 3rem 4rem 6rem;
-  }
-
-  .modal-info p {
-    font-size: var(--small);
-  }
-
-  .navigate-left {
-    left: 2%;
-  }
-
-  .navigate-right {
-    right: 2%;
-  }
-
-  /* About */
-
-  .about {
-    padding: 8rem 0;
-  }
-
-  .about p {
-    font-size: var(--small);
-    margin-bottom: 2rem;
-  }
-
-  .about-contact-icons {
-    display: flex;
-    justify-content: center;
-    gap: 4rem;
-  }
-
   .about-contact-icons svg {
     width: 2rem;
   }
+}
 
+@media (min-width: 768px) {
   .about-contact-icons svg:hover {
     fill: var(--color-red);
     transform: translateY(-2px);
   }
 }
 
-/* Large Desktop */
-@media (min-width: 1440px) {
-  /* Portfolio */
-
-  .projects {
-    margin: auto;
-    max-width: 1440px;
-  }
+.about-contact-icons p.email {
+  margin: 0;
+  color: var(--color-white);
 }

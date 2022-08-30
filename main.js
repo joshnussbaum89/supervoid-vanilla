@@ -122,7 +122,7 @@ function displayProjectModal(id) {
   const modalGif = $('.modal-gif--js')
   const modalClient = $('.modal-client--js')
   const modalProject = $('.modal-project--js')
-  const modalDate = $('.modal-description--js')
+  const modalDescription = $('.modal-description--js')
 
   // update project gif, client, project + date
   modalGif.setAttribute('src', projectData[id].gif)
@@ -132,7 +132,7 @@ function displayProjectModal(id) {
   )
   modalClient.innerHTML = projectData[id].client
   modalProject.innerHTML = `<span class="modal-label">Project:</span> ${projectData[id].project}`
-  modalDate.innerHTML = `<span class="modal-label">Description:</span> ${projectData[id].description}`
+  modalDescription.innerHTML = `<span class="modal-label">Description:</span> ${projectData[id].description}`
 }
 
 // Open project modal popup with info about project clicked
