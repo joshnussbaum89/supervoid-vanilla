@@ -298,23 +298,20 @@ img {
   max-width: 52rem;
 }
 
-@media (min-width: 768px) {
-  .hero-info h1 {
-    font-size: var(--titleLarge);
-  }
-}
-
-.hero-info p {
+.hero-info h1 {
   margin: 0 auto 2rem auto;
   width: 95%;
   max-width: 50rem;
+  font-family: var(--font-plex-sans);
   font-size: var(--small);
+  text-transform: lowercase;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
   text-shadow: 1px 1px 0 var(--color-black);
-  color: var(--color-white);
 }
 
 @media (min-width: 768px) {
-  .hero-info p {
+  .hero-info h1 {
     font-size: var(--medium);
   }
 }
@@ -631,7 +628,7 @@ img {
   margin: auto;
   padding: 6rem 0;
   width: 95%;
-  max-width: 54rem;
+  max-width: 80rem;
 }
 
 @media (min-width: 768px) {
@@ -642,7 +639,7 @@ img {
 
 .about p {
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: var(--extraSmall);
   text-align: center;
   color: var(--color-grey);
@@ -651,7 +648,6 @@ img {
 @media (min-width: 768px) {
   .about p {
     font-size: var(--small);
-    margin-bottom: 2rem;
   }
 }
 
@@ -659,39 +655,75 @@ img {
   text-transform: uppercase;
 }
 
-.about-contact-icons {
+.about-contact-info {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin: 1rem;
+  margin: 2rem 0 4rem;
 }
 
 @media (min-width: 768px) {
-  .about-contact-icons {
+  .about-contact-info {
     gap: 4rem;
   }
 }
 
-.about-contact-icons svg {
+.about-contact-info svg {
   width: 1.5rem;
   fill: var(--color-white);
   transition: all 0.25s ease;
 }
 
 @media (min-width: 768px) {
-  .about-contact-icons svg {
+  .about-contact-info svg {
     width: 2rem;
   }
 }
 
 @media (min-width: 768px) {
-  .about-contact-icons svg:hover {
+  .about-contact-info svg:hover {
     fill: var(--color-red);
     transform: translateY(-2px);
   }
 }
 
-.about-contact-icons p.email {
+.about-contact-info p.email {
   margin: 0;
   color: var(--color-white);
+}
+
+.about-image-container {
+  margin: 0 auto 4rem;
+  width: 90%;
+  max-width: 40rem;
+  text-align: center;
+}
+
+.about-image-container img {
+  width: 100%;
+  border-radius: 1%;
+}
+
+.about-image-container figcaption {
+  margin-top: 0.5rem;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: var(--extraSmall);
+  color: var(--color-white);
+}
+
+.about-services {
+  text-align: center;
+}
+
+.about-services h3 {
+  text-decoration: underline;
+}
+
+.about-services ul {
+  padding: 0;
+}
+
+.about-services li {
+  font-size: var(--extraSmall);
+  color: var(--color-grey);
 }

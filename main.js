@@ -4,9 +4,6 @@
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-// Initialize AOS animation library
-AOS.init({ once: true })
-
 // Initialize Vimeo Player
 const iframe = $('iframe')
 const player = new Vimeo.Player(iframe)
@@ -240,3 +237,6 @@ projectModal.addEventListener('click', userClickedOutsideProjectModal)
 // User clicks play/pause on reel > update video helper
 player.on('play', () => $('body').setAttribute('data-video-playing', true))
 player.on('pause', () => $('body').setAttribute('data-video-playing', false))
+
+// Initialize AOS animation library
+AOS.init({ once: true })
