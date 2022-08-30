@@ -122,7 +122,7 @@ function displayProjectModal(id) {
   const modalGif = $('.modal-gif--js')
   const modalClient = $('.modal-client--js')
   const modalProject = $('.modal-project--js')
-  const modalDate = $('.modal-date--js')
+  const modalDate = $('.modal-description--js')
 
   // update project gif, client, project + date
   modalGif.setAttribute('src', projectData[id].gif)
