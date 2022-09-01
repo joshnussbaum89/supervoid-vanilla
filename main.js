@@ -5,7 +5,7 @@ const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
 // Global DOM selectors
-const mainNavigation = $('.hero-nav')
+const heroNavigation = $('.hero-nav')
 const supervoidLogo = $('.hero-nav a')
 const hamburgerMenu = $('.hamburger')
 const mobileNav = $('.mobile-nav')
@@ -200,9 +200,9 @@ function hideShowHeroNavigation() {
   // IF previous position is greater than current position > hide navigation
   // ELSE show navigation
   if (previousScrollPosition < currentScrollPosition) {
-    mainNavigation.classList.remove('show')
+    heroNavigation.classList.remove('show')
   } else {
-    mainNavigation.classList.add('show')
+    heroNavigation.classList.add('show')
   }
 
   previousScrollPosition = currentScrollPosition
