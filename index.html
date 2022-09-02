@@ -23,7 +23,7 @@
     <link rel="icon" href="assets/images/supernova-site-background.webp" type="image/png" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <title>SUPERVOID: Psychedelic Dreams for Stage + Screen</title>
   </head>
   <body data-overlay-displayed="false" data-video-playing="false">
@@ -356,10 +356,16 @@
           </a>
           <p class="email">info@supervoid.tv</p>
         </div>
-        <figure class="about-image-container">
-          <img src="./assets/images/drew-keppler-2005.jpeg" alt="Highschool yearbook photo of Drew Mercedante and Matt Keppler" loading="lazy"/>
-          <figcaption>2005 - present</figcaption>
-        </figure>
+        <div class="about-images-container">
+          <div class="about-images">
+            <img id="about-image-one" src="./assets/images/drew-keppler-2005.webp" alt="Highschool yearbook photo of Drew Mercedante and Matt Keppler" loading="lazy"/>
+            <img id="about-image-two" src="./assets/images/drew-keppler-2022.webp" alt="Present day photo of Drew Mercedante and Matt Keppler at the Supervoid office" loading="lazy"/>
+          </div>
+          <!-- TODO: style as dots active/inactive -->
+          <span class="left">left</span>
+          <span class="right">right</span>
+          <p>2005 - present</p>
+        </div>
         <div class="about-services">
           <h3>Services</h3>
           <ul>
