@@ -252,26 +252,9 @@ mobileNavItems.forEach((item) =>
 // Initialize AOS animation library
 AOS.init({ once: true })
 
-// TODO: refactor 
-
-const aboutImageOne = $('#about-image-one')
-const aboutImageTwo = $('#about-image-two')
-const aboutImageLeft = $('.left')
-const aboutImageRight = $('.right')
-
-const scrollOptions = {
-  behavior: 'smooth',
-  block: 'nearest',
-  inline: 'center',
-}
-
-function scrollToImageTwo() {
-  aboutImageTwo.scrollIntoView(scrollOptions)
-}
-
-function scrollToImageOne() {
-  aboutImageOne.scrollIntoView(scrollOptions)
-}
-
-aboutImageLeft.addEventListener('click', scrollToImageTwo)
-aboutImageRight.addEventListener('click', scrollToImageOne)
+// Initialize Swiper
+const swiper = new Swiper('.mySwiper', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
+})
