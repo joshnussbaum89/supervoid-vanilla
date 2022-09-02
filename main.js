@@ -14,9 +14,9 @@ const mobileNavItems = $$('.mobile-nav a')
 // Track scroll position
 let previousScrollPosition = window.scrollY
 
-/***************************
+/****************************
         HOME PAGE JS
-****************************/
+*****************************/
 
 if (!window.location.href.includes('rentals.html')) {
   // Home page DOM selectors
@@ -180,9 +180,9 @@ if (!window.location.href.includes('rentals.html')) {
   player.on('pause', () => $('body').setAttribute('data-video-playing', false))
 }
 
-/***************************
+/****************************
           GLOBAL JS
-****************************/
+*****************************/
 
 // IF mobile navigation or reel is open > disable scrolling
 function updateOverlayScrollingHelper(element) {
