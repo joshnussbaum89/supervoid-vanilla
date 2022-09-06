@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <title>SUPERVOID: Rentals</title>
   </head>
   <body data-overlay-displayed="false" data-video-playing="false" data-page="rentals">
@@ -30,8 +31,8 @@
           <a href="/"><img src="./assets/images/supervoid-logo-voidstar-stylized.webp" title="Supervoid" alt="Supervoid logo version of supernova explosion" /></a>
           <ul class="desktop-nav">
             <li><a href="/#portfolio">Portfolio</a></li>
-            <li><a href="/rentals.html">Rentals</a></li>
             <li><a href="/#about">About</a></li>
+            <li><a href="/rentals.html">Rentals</a></li>
           </ul>
           <!-- Mobile hamburger -->
           <div class="hamburger">
@@ -43,8 +44,8 @@
         <nav class="mobile-nav">
           <ul>
             <li><a href="/#portfolio">Portfolio</a></li>
-            <li><a href="/rentals.html">Rentals</a></li>
             <li><a href="/#about">About</a></li>
+            <li><a href="/rentals.html">Rentals</a></li>
           </ul>
         </nav>
         <!-- Info & CTA's -->
@@ -78,29 +79,60 @@
           <div class="col-1">
             <!-- TODO: add .active class to card on scroll (mobile) -->
             <div class="card">
-              <p>Run up to 12 HD screens, 3 4K screens, or even a single 8K screen, with a dedicated GUI for controlling the software</p>
+              <p>run up to 12 HD screens, 3 4K screens, or even a single 8K screen, with a dedicated GUI for controlling the software</p>
             </div>
             <div class="card">
-              <p>Capture up to 4 HD inputs or one 4K input over SDI or HDMI</p>
+              <p>capture up to 4 HD inputs or one 4K input over SDI or HDMI</p>
             </div>
           </div>
           <div class="col-2">
             <div class="card">
-              <p>Real-time low latency visual effects with Notch built into each server</p>
+              <p>real-time low latency visual effects with Notch built into each server</p>
             </div>
           </div>
           <div class="col-3">
             <div class="card">
-              <p>Control via your lighting desk with artnet or from MIDI or OSC</p>
+              <p>control via your lighting desk with artnet or from MIDI or OSC</p>
             </div>
             <div class="card">
-              <p>Remote Control over LAN/Wifi from any Windows or Mac computer.</p>
+              <p>remote Control over LAN/Wifi from any Windows or Mac computer.</p>
             </div>
           </div>
         </div>
+        <div class="pricing">
+          <img src="./assets/images/2ru-rack.webp" alt="Drew Mercadante standing with Supervoid 2RU Fly Rack Kit" loading="lazy">
+          <p>Our 2RU Fly Rack Kits contain everything you need to run your show. Rentals start as low as $500/week, with 24/7 tech support and SUPERVOID exclusive VJ loops and visual content included in every rental.</p>
+        </div>
       </section>
+
+      <!-- Footer/Contact -->
+      <footer class="rentals-footer">
+        <button class="supervoid-cta">
+          <a href="/#about">contact us</a>
+        </button>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./assets/images/dan-shay.webp" alt="Dan + Shay Stadium Tour 2022" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/caroline-polachek.webp" alt="Caroline Polachek Arena Tour 2022" loading="lazy" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/images/tate-mcrae-mia_red.webp" alt="Tate McRae Made In America Festival 2022" loading="lazy" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="rentals-footer-gallery">
+          <img src="./assets/images/dan-shay.webp" alt="Dan & Shay" loading="lazy">
+          <img src="./assets/images/caroline-polachek.webp" alt="Caroline Polacheck" loading="lazy">
+          <img src="./assets/images/tate-mcrae-mia_red.webp" alt="Tate McRae" loading="lazy">
+        </div>
+      </footer>
     </main>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
