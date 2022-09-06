@@ -118,6 +118,10 @@ img {
   object-fit: cover;
 }
 
+figure {
+  margin: 0;
+}
+
 /* Scrollbar width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -825,19 +829,24 @@ img {
 
 /* Description */
 
-.rentals-description .general {
+.rentals-description .general,
+.rentals-description .philosophy {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10rem;
   width: 95%;
-  max-width: 700px;
-  text-align: center;
+  margin-bottom: 10rem;
 }
 
 @media (min-width: 768px) {
-  .rentals-description .general {
+  .rentals-description .general,
+  .rentals-description .philosophy {
     margin-bottom: 16rem;
   }
+}
+
+.rentals-description .general {
+  max-width: 700px;
+  text-align: center;
 }
 
 .rentals-description .general p {
@@ -854,4 +863,46 @@ img {
 
 .rentals-description .general svg {
   transform: rotate(-90deg);
+}
+
+.philosophy {
+  max-width: 900px;
+}
+
+.philosophy img {
+  width: 100%;
+  border-radius: 1%;
+}
+
+.philosophy figcaption {
+  margin-bottom: 1.5rem;
+  font-size: var(--extraSmall);
+  text-align: center;
+  color: var(--color-grey);
+}
+
+@media (min-width: 768px) {
+  .philosophy figcaption {
+    margin-bottom: 2rem;
+  }
+}
+
+.philosophy p {
+  width: 90%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--extraSmall);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .philosophy p {
+    font-size: var(--small);
+  }
+}
+
+/* Server Specs */
+
+.server-specs {
 }
