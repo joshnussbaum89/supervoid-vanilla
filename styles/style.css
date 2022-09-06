@@ -613,7 +613,8 @@ img {
 }
 
 .navigate-left svg,
-.navigate-right svg {
+.navigate-right svg,
+.rentals-description svg {
   fill: var(--color-white);
 }
 
@@ -782,4 +783,75 @@ img {
 .about-services li {
   font-size: var(--extraSmall);
   color: var(--color-grey);
+}
+
+/***********************
+      Rentals Page 
+************************/
+
+/* Hero Section */
+
+[data-page='rentals'] .hero {
+  margin-bottom: 10rem;
+  background-image: url('../assets/images/msg-test-pattern.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  [data-page='rentals'] .hero {
+    margin-bottom: 16rem;
+  }
+}
+
+[data-page='rentals'] .hero-info h1 {
+  margin: auto;
+  font-family: var(--font-supervoid);
+  font-size: clamp(var(--large), 10vw + 1rem, var(--titleLarge));
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+[data-page='rentals'] .shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 23.5%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  transform: translate(-50%, 0);
+}
+
+/* Description */
+
+.rentals-description .general {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10rem;
+  width: 95%;
+  max-width: 700px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rentals-description .general {
+    margin-bottom: 16rem;
+  }
+}
+
+.rentals-description .general p {
+  margin-bottom: 1rem;
+  font-size: var(--small);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .rentals-description .general p {
+    font-size: var(--medium);
+  }
+}
+
+.rentals-description .general svg {
+  transform: rotate(-90deg);
 }
