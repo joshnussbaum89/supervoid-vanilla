@@ -15,7 +15,7 @@ const mobileNavItems = $$('.mobile-nav a')
 let previousScrollPosition = window.scrollY
 
 /****************************
-        HOME PAGE JS
+        HOME + Rentals
 *****************************/
 
 if (!window.location.href.includes('rentals.html')) {
@@ -178,6 +178,29 @@ if (!window.location.href.includes('rentals.html')) {
   // User clicks play/pause on reel > update video helper
   player.on('play', () => $('body').setAttribute('data-video-playing', true))
   player.on('pause', () => $('body').setAttribute('data-video-playing', false))
+} else if (window.location.href.includes('rentals.html')) {
+  // Mobile >> handle Server Spec card styling on scroll
+  function handleActiveCardStyles() {
+    let cards = $$('.card-container .card')
+    let middleOfPage = window.innerHeight / 2
+
+    cards.forEach((card) => {
+      if (window.innerWidth < 700) {
+        let cardTop = card.getBoundingClientRect().top
+
+        if (cardTop <= middleOfPage && cardTop > 50) {
+          card.classList.add('active')
+        } else {
+          card.classList.remove('active')
+        }
+      } else {
+        card.classList.remove('active')
+      }
+    })
+  }
+
+  // User scrolls >> listen for card location + handle ".active" styles
+  window.addEventListener('scroll', handleActiveCardStyles)
 }
 
 /****************************
