@@ -182,13 +182,13 @@ if (!window.location.href.includes('rentals.html')) {
   // Mobile >> handle Server Spec card styling on scroll
   function handleActiveCardStyles() {
     let cards = $$('.card-container .card')
-    let middleOfPage = window.innerHeight / 2
+    let verticalActivePoint = window.innerHeight / 2 + 100
 
     cards.forEach((card) => {
       if (window.innerWidth < 700) {
         let cardTop = card.getBoundingClientRect().top
 
-        if (cardTop <= middleOfPage && cardTop > 50) {
+        if (cardTop <= verticalActivePoint && cardTop > 100) {
           card.classList.add('active')
         } else {
           card.classList.remove('active')
