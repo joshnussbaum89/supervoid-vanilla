@@ -1029,13 +1029,7 @@ figure {
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     align-items: center;
-    gap: 4rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .pricing {
-    gap: 6rem;
+    gap: 8.5%;
   }
 }
 

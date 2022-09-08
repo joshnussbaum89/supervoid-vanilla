@@ -185,7 +185,7 @@ if (!window.location.href.includes('rentals.html')) {
     let verticalActivePoint = window.innerHeight / 2 + 100
 
     cards.forEach((card) => {
-      if (window.innerWidth < 700) {
+      if (window.innerWidth < 768) {
         let cardTop = card.getBoundingClientRect().top
 
         if (cardTop <= verticalActivePoint && cardTop > 100) {
