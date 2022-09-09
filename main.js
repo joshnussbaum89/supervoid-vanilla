@@ -18,7 +18,7 @@ let previousScrollPosition = window.scrollY
         HOME + Rentals
 *****************************/
 
-if (!window.location.href.includes('rentals.html')) {
+if (!window.location.href.includes('rentals')) {
   // Home page DOM selectors
   const watchPromoReelCTA = $('.watch-promo--js')
   const promoReelContainer = $('.promo-reel-container')
@@ -178,7 +178,7 @@ if (!window.location.href.includes('rentals.html')) {
   // User clicks play/pause on reel > update video helper
   player.on('play', () => $('body').setAttribute('data-video-playing', true))
   player.on('pause', () => $('body').setAttribute('data-video-playing', false))
-} else if (window.location.href.includes('rentals.html')) {
+} else if (window.location.href.includes('rentals')) {
   // Mobile >> handle Server Spec card styling on scroll
   function handleActiveCardStyles() {
     let cards = $$('.card-container .card')
