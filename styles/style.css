@@ -403,14 +403,14 @@ figure {
   }
 }
 
-/* Portfolio */
+/* Work */
 
-.portfolio {
+.work {
   padding-top: 6rem;
 }
 
 @media (min-width: 768px) {
-  .portfolio {
+  .work {
     padding-top: 9rem;
   }
 }
