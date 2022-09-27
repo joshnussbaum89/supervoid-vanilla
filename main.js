@@ -15,7 +15,7 @@ const mobileNavItems = $$('.mobile-nav a')
 let previousScrollPosition = window.scrollY
 
 /****************************
-        HOME + Rentals
+        Home + Rentals
 *****************************/
 
 if (!window.location.href.includes('rentals')) {
