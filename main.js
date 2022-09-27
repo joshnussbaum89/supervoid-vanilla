@@ -217,8 +217,15 @@ function updateOverlayScrollingHelper(element) {
 }
 
 // Handle navigation display on scroll
-function hideShowHeroNavigation() {
+function hideShowNavigation() {
   let currentScrollPosition = window.scrollY
+
+  // IF user scrolls to the top of the page
+  if (currentScrollPosition < 5) {
+    heroNavigation.classList.add('top')
+  } else {
+    heroNavigation.classList.remove('top')
+  }
 
   // IF previous position is greater than current position > hide navigation
   // ELSE show navigation
@@ -259,7 +266,7 @@ function hideMobileNavigationOnDesktop() {
 window.addEventListener('resize', hideMobileNavigationOnDesktop)
 
 // User scrolls > hide or show main hero navigation
-document.addEventListener('scroll', hideShowHeroNavigation)
+document.addEventListener('scroll', hideShowNavigation)
 
 // Mobile > user clicks hambruger menu > toggle menu open
 hamburgerMenu.addEventListener('click', toggleMobileNavigation)

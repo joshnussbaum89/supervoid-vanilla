@@ -201,9 +201,14 @@ figure {
   transition: all 0.4s ease;
 }
 
+.hero-nav.top,
 .hero-nav.show {
   top: 0;
   opacity: 1;
+}
+
+.hero-nav.top {
+  background: transparent;
 }
 
 .hero-nav img {
